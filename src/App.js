@@ -91,7 +91,7 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-    fetch('https://smart-app.onrender.com/imageurl', {
+    fetch('https://smart-api-j8dr.onrender.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -101,7 +101,7 @@ onButtonSubmit = () => {
     .then(response => response.json())
       .then(response => {
       if (response) {
-        fetch('https://smart-app.onrender.com/image', {
+        fetch('https://smart-api-j8dr.onrender.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
